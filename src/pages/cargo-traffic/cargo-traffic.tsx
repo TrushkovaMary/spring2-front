@@ -89,22 +89,6 @@ export function CargoTraffic() {
         setGist(arr.reverse())
     }, [initialCargos])
 
-    // React.useEffect(() => {
-    //     let arr: any[] = [];
-    //     for (let i = DAYS - 1; i >= 0; i--) {
-    //         let count = 0;
-    //         const day = new Date(Date.now() - 86400000 * i);
-    //         const formattedToday = day.toISOString().slice(0, 10);
-    //         for (let j = 0; j < initialCargos.length; j++) {
-    //             // @ts-ignore
-    //             if (initialCargos[j].dataTo == formattedToday) {
-    //                 count++;
-    //             }
-    //         }
-    //         arr.push({date: formattedToday, count})
-    //     }
-    //     setGist(arr)
-    // }, [initialCargos])
 
     const labels = [...gist.map((el) => el.date)];
     const data = {
